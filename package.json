@@ -17,13 +17,16 @@
 	"pkg": {
 		"assets": [
 			"server.key",
-			"server.crt"
+			"server.crt",
+			"precompiled/pino-*.js",
+			"precompiled/thread-stream-worker.js"
 		],
 		"targets": [
 			"node16-linux-arm64",
 			"node16-win-arm64",
 			"node16-linux-x64",
-			"node16-win-x64"
+			"node16-win-x64",
+			"node16-macos-arm64"
 		],
 		"outputPath": "dist"
 	},
@@ -34,7 +37,8 @@
 	"author": "nondanee, 1715173329, pan93412",
 	"license": "LGPL-3.0-only",
 	"dependencies": {
-		"node-windows": "^1.0.0-beta.6"
+		"node-windows": "^1.0.0-beta.6",
+		"pino-webpack-plugin": "^1.0.0"
 	},
 	"devDependencies": {
 		"@swc/core": "^1.2.111",
